@@ -20,6 +20,5 @@
 - Conduzi a sessão, definindo o escopo de cada etapa e aprovando as alterações antes de avançar.
 - Revisei o diagnóstico, as correções aplicadas e os resultados dos testes.
 - Validei a conferência final contra a amostra do README e a entrega.
-
-> Observação: ajuste os itens acima conforme a divisão real de trabalho entre você e a IA antes de
-> enviar a entrega.
+- Solicitei a criação de testes adicionais para ampliar a validação do projeto.
+- Revisei os novos cenários de teste e os resultados da execução.
