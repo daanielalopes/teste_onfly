@@ -76,6 +76,48 @@ os arquivos de uso de IA.
 
 ---
 
+## 7. Configuração do remoto e primeiro envio ao GitHub
+
+**Prompt:** Configurar o repositório `https://github.com/daanielalopes/teste_onfly.git` como remoto,
+conferir branch e arquivos, commitar e enviar.
+
+**O que a IA fez:**
+- Verificou que o `origin` já apontava para a URL informada e que a branch era `main`.
+- Conferiu o `.gitignore` (confirmando que `output/*` não seria commitado) e estagiou os 5 fontes
+  corrigidos mais os documentos da entrega.
+- Criou o commit `b3cb316` com as correções e a documentação.
+- Diagnosticou um erro de certificado SSL no push (backend OpenSSL do git); confirmou que a
+  conectividade com o GitHub estava OK e resolveu usando o backend nativo do Windows
+  (`-c http.sslBackend=schannel`), sem alterar a config global.
+- Push concluído e local/remoto sincronizados.
+
+---
+
+## 8. Testes adicionais
+
+**Prompt:** Criar testes adicionais com `pytest` cobrindo casos extremos, dados inválidos, erros e
+integração; validar com `pytest` e commitar no GitHub.
+
+**O que a IA fez:**
+- Criou 4 arquivos de teste (61 testes novos):
+  - `test_unit_services.py` — limites de noites, câmbio e política de status;
+  - `test_repositories.py` — arquivos ausentes, colunas faltando, taxas inválidas;
+  - `test_cli_errors.py` — códigos de saída 0/1/2 do CLI;
+  - `test_integration_report.py` — agregação, ranking, arredondamento e parser ponta a ponta.
+- Rodou o `pytest`: **66 testes passando** (5 fornecidos + 61 novos).
+- Commitou (`f7cac96`) e enviou ao GitHub, novamente via backend `schannel`.
+
+---
+
+## 9. Atualização do log da sessão
+
+**Prompt:** Registrar as duas últimas etapas (envio ao GitHub e testes adicionais) neste log.
+
+**O que a IA fez:**
+- Acrescentou as seções 7, 8 e esta 9 ao `sessao.md` e enviou a atualização ao GitHub.
+
+---
+
 > Observação: este log é um resumo consolidado dos prompts e respostas da sessão. Caso a ferramenta
 > ofereça exportação nativa (JSON/transcrição completa), ela pode ser anexada a esta pasta como
 > complemento.
